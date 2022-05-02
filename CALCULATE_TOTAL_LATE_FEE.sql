@@ -21,8 +21,7 @@ BEGIN
   WHERE C.REGISTRATION_NUMBER = regNum;
   
   IF actualReturnDateTime > ReturnDateTime THEN
-    SET hourDifference = (DATE (CHAR (actualReturnDateTime, 'dd/mm/yyyy  hh24:mi:ss'), 'dd/mm/yyyy  hh24:mi:ss')
-                      - DATE (CHAR (ReturnDateTime, 'dd/mm/yyyy  hh24:mi:ss'),'dd/mm/yyyy  hh24:mi:ss'))*(24);
+    SET hourDifference = TIMESTAMPDIFF(HOUR,ReturnDateTime,actualReturnDateTime);
     SET totalLateFee = hourDifference * lateFeePerHour;
   ELSE
     SET totalLateFee = 0;
