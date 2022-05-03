@@ -11,7 +11,6 @@ IN regNum CHAR(7),
 IN amount FLOAT(10,2),
 OUT totalLateFee FLOAT(10,2),
 OUT totalTax FLOAT(10,2)) 
--- local declarations
 
 BEGIN
   DECLARE lateFeePerHour FLOAT(5,2);
