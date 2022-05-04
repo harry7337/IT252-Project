@@ -1,9 +1,5 @@
 source DB_PROJECT.sql;
 source INSERT_SCRIPT.sql;
-source UPDATE_TRIGGER_FOR_BOOKING.sql;
-source CALCULATE_TOTAL_LATE_FEE.sql;
-source CALCULATE_DISCOUNT_AMOUNT.sql;
-source GENERATE_BILLING_TRIGGER.sql;
-source GENERATE_REVENUE_REPORT.sql;
 source SIMPLE_QUERIES.sql;
 source VIEWS.sql;
+source TRIGGERS.sql;
